@@ -1,0 +1,31 @@
+.product-wrapper{
+  font-family: "FoglihtenNo06", sans-serif;
+}
+.product-wrapper img{
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.product-wrapper li{
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #484848;
+  cursor: pointer;
+  &:hover {
+    background-color: #a9a7a3;
+    color: #dedede;
+    transition: .3s background-color;
+  }
+  @media screen and (max-width: 767px){
+    font-size: 20px;
+  }
+  @media screen and (max-width: 368px){
+    font-size: 15px;
+  }
+  @media screen and (max-width: 238px){
+    font-size: 13px;
+  }
+}
+.product-wrapper label, .product-wrapper input{
+  cursor: pointer;
+}

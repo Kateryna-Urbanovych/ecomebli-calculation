@@ -1,0 +1,5 @@
+export const types = Object.freeze({
+    GET_PRODUCTS: 'GET_PRODUCTS',
+    LOADING_PRODUCTS: 'LOADING_PRODUCTS',
+    FAILED_PRODUCTS: 'FAILED_PRODUCTS',
+})

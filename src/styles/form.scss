@@ -1,0 +1,122 @@
+
+.form-wrapper{
+  font-family: "Mazzard M Medium", sans-serif;
+  font-size: 18px;
+  @media screen and (min-width: 992px){
+    font-size: 25px;
+  }
+  @media screen and (max-width: 350px){
+    font-size: 14px;
+  }
+  @media screen and (max-width: 290px){
+    font-size: 10px;
+  }
+}
+.form-wrapper h3{
+  color: #66635C;
+}
+.input-wrapper{
+  padding: 2% 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form-wrapper form > div .input-wrapper:last-child::before {
+  content: "Номер телефону";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  padding-left: 25px;
+  align-items: center;
+  color: rgb(64, 62, 58);
+  line-height: 1.1rem;
+}
+.form-wrapper form>div input.tel-input {
+  box-sizing: border-box;
+  border: 2px solid rgba(64,62,58,0.1);
+  width: 100%;
+  max-width: 500px;
+  padding-left: 300px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: rgba(64,62,58,0.6);
+  outline: none;
+  @media screen and (max-width: 1199px){
+    padding-left: 50%;
+  }
+}
+.form-wrapper form>div input.tel-input-home {
+  box-sizing: border-box;
+  border: 2px solid rgba(64,62,58,0.1);
+  width: 100%;
+  max-width: 500px;
+  padding-left: 300px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: rgba(64,62,58,0.6);
+  outline: none;
+  @media screen and (max-width: 650px){
+    padding-left: 50%;
+  }
+}
+.form-wrapper form > div .input-wrapper:first-child::before {
+  content: "Ваше ім'я";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  padding-left: 25px;
+  align-items: center;
+  color: rgb(64, 62, 58);
+  line-height: 1.1;
+}
+.form-wrapper form>div input {
+  background: rgba(64,62,58,0.02);
+  border: 1px solid rgba(64,62,58,0.1);
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  padding: 15px 25px;
+  outline: none;
+}
+.form-wrapper form>div input.name-input {
+  box-sizing: border-box;
+  border: 2px solid rgba(64,62,58,0.1);
+  width: 100%;
+  max-width: 500px;
+  padding-left: 300px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: rgba(64,62,58,0.6);
+  @media screen and (max-width: 1199px){
+    padding-left: 50%;
+  }
+}
+.form-wrapper form>div input.name-input-home {
+  box-sizing: border-box;
+  border: 2px solid rgba(64,62,58,0.1);
+  width: 100%;
+  max-width: 500px;
+  padding-left: 300px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: rgba(64,62,58,0.6);
+  @media screen and (max-width: 650px){
+    padding-left: 50%;
+  }
+}
+.form-wrapper form>div button.submit-input {
+  cursor: pointer;
+  border-radius: 1.25rem;
+  height: 50px;
+  width: 100%;
+  max-width: 350px;
+  padding-left: 25px;
+  line-height: 1.1;
+  text-align: left;
+  background: url("../assets/images/submit-image.png") no-repeat 88% center,linear-gradient(to right, #fad1ac, #fad1ac);
+  background-size: 30px;
+  border: none;
+}

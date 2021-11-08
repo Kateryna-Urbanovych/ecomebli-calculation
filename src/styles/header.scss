@@ -1,0 +1,135 @@
+.navbar-custom{
+  display: flex;
+  @media (max-width: 767px){
+    display: none !important;
+  }
+}
+.navbar-brand-button{
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #403E3A;
+  &:hover, &:active {
+    color: #403E3A;
+  }
+}
+.mobile-menu .wrapper {
+  justify-content: space-between;
+  width: 75vw;
+  padding: 40px 20px;
+  background-color: #d3d3d3;
+  height: 100vh;
+  border-top-right-radius: 15px;
+  box-shadow: 1px 0px 26px -1px #8c8c8c;
+}
+.close-wrapper {
+  width: 25vw;
+  height: 100%;
+}
+.header{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+  width: 100%;
+  background-color: #E3E1DA;
+  @media screen and (min-width: 980px){
+    padding: 2vw;
+  }
+}
+.header-logo{
+  max-height: 50px;
+}
+.toggler{
+  display: none;
+  width: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 767px){
+    display: flex;
+  }
+}
+.toggler-icon{
+  transition: .3ms transform;
+  transform: rotate(90deg);
+}
+.navbar-toggle__burger {
+  width: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-toggle__burger::before {
+  transform: translateY(-4px);
+}
+.navbar-toggle__burger::before, .navbar-toggle__burger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #000;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.toggler.open .navbar-toggle__burger {
+  transform: translateX(-25px);
+  background: transparent;
+}
+.toggler.open .navbar-toggle__burger::before {
+  transform: rotate(
+                  -45deg
+  ) translate(17px, 17px);
+}
+.toggler.open .navbar-toggle__burger::after {
+  right: 0;
+  width: 25px;
+  transform: rotate(
+                  45deg
+  ) translate(17px, -17px);
+}
+.navbar-toggle__burger::after {
+  right: 7px;
+  width: 20px;
+  transform: translateY(4px);
+}
+.mobile-menu {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow: hidden;
+  z-index: 20;
+  transition: left ease .3s;
+}
+.mobile-menu--open {
+  left: 0;
+}
+.header-link{
+  display: block;
+  font-family: "Mazzard L Bold", sans-serif;
+  font-size: 1.3vw;
+  padding: .5rem 1rem;
+  color: #403E3A;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:hover, &:active {
+    color: #858379;
+  }
+  @media screen and (max-width: 767px){
+    font-size: 4vw;
+  }
+}
+.phone{
+  font-size: 1.3vw;
+}

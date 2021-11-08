@@ -1,0 +1,131 @@
+.large-text {
+  position: relative;
+  color: #403e3a;
+  font-weight: 500;
+  font-size: 13vw;
+  line-height: 100%;
+  font-family: FoglihtenNo06, sans-serif;
+}
+.mobile-break {
+  @media screen and (max-width: 767px){
+    display: block;
+    height: 0;
+  }
+}
+.sup-text {
+  position: relative;
+  display: inline-block;
+  min-width: 1.5vw;
+  left: .5vw;
+  top: -2vw;
+  font-size: 4vw;
+  font-weight: 300;
+}
+.about .container .cell-2 {
+  @media screen and (max-width: 767px){
+    order: 5;
+    text-align: center;
+    width: 44%;
+    margin-bottom: 12.5rem;
+  }
+}
+.space-between{
+  justify-content: space-between;
+}
+.cell-1{
+  width: 28%;
+  @media screen and (max-width: 767px){
+    order: 4;
+    text-align: center;
+    width: 49%;
+    margin-bottom: 4vw;
+  }
+}
+.cell-2 {
+  width: 26%;
+  @media screen and (max-width: 767px){
+    order: 5;
+    text-align: center;
+    width: 49%;
+    margin-bottom: 4vw;
+  }
+}
+.cell-3 {
+  width: 46%;
+  margin-bottom: 1.5vw;
+  text-align: right;
+  @media screen and (max-width: 767px){
+    order: 1;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+  }
+}
+.cell-4 {
+  width: 57%;
+  margin-bottom: 8vw;
+  @media screen and (max-width: 767px){
+    order: 2;
+    text-align: right;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2vw;
+  }
+}
+.cell-5 {
+  width: 32%;
+  box-sizing: border-box;
+  text-align: right;
+  @media screen and (max-width: 767px){
+    order: 3;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+  }
+}
+.cell-6 {
+  width: 56%;
+  text-align: right;
+  @media screen and (max-width: 767px){
+    order: 6;
+    text-align: center;
+    width: 49%;
+    padding: 0;
+  }
+}
+.cell-7 {
+  width: 44%;
+  box-sizing: border-box;
+  text-align: right;
+  @media screen and (max-width: 767px){
+    order: 7;
+    text-align: center;
+    width: 49%;
+    padding: 0;
+  }
+}
+.basic-text-big{
+  font-size: 5vw;
+  color: #403e3a;
+  font-family: "Mazzard L Bold", sans-serif;
+}
+.basic-text-small {
+  font-size: 1.2vw;
+  line-height: 1.2;
+  padding-bottom: 4vw;
+  font-family: "Mazzard M Medium", sans-serif;
+  color: #403e3a;
+  @media screen and (max-width: 767px){
+    font-size: 3vw;
+  }
+}
+.sub-text{
+  font-size: .25em;
+  @media screen and (max-width: 767px){
+    font-size: .5em;
+  }
+}
+#about{
+  background: linear-gradient(180deg, #E5E5E5 0%, #e3e1da 34.92%);
+  padding: 0 5%;
+}
