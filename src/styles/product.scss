@@ -1,11 +1,11 @@
-.product-wrapper{
+.product-wrapper {
   font-family: "FoglihtenNo06", sans-serif;
 }
-.product-wrapper img{
+.product-wrapper img {
   aspect-ratio: 3/4;
   object-fit: cover;
 }
-.product-wrapper li{
+.product-wrapper li {
   font-size: 25px;
   list-style: none;
   display: flex;
@@ -14,18 +14,19 @@
   &:hover {
     background-color: #a9a7a3;
     color: #dedede;
-    transition: .3s background-color;
+    transition: 0.3s background-color;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     font-size: 20px;
   }
-  @media screen and (max-width: 368px){
+  @media screen and (max-width: 368px) {
     font-size: 15px;
   }
-  @media screen and (max-width: 238px){
+  @media screen and (max-width: 238px) {
     font-size: 13px;
   }
 }
-.product-wrapper label, .product-wrapper input{
+.product-wrapper label,
+.product-wrapper input {
   cursor: pointer;
 }
