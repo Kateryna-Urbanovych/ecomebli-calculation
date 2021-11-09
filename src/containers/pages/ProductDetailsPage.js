@@ -1,41 +1,30 @@
-import { useParams } from "react-router"
-import { useProducts } from "../../hooks/useProducts"
-import {
-  Col,
-  Container,
-  Row,
-  InputGroup,
-  InputGroupText,
-  Input,
-  ButtonDropdown,
-  Button,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap"
-import { LoadingComponent } from "../../components/LoadingComponent"
-import { NotFoundData } from "../../components/NotFoundData"
-import "../../styles/product.scss"
-import React from "react"
-import { ContactForm } from "../../components/ContactForm"
-import { AlertWrapper } from "../../components/AlertWrapper"
+import { useParams } from 'react-router';
+import { useProducts } from '../../hooks/useProducts';
+import { Col, Container, Row } from 'reactstrap';
+import { LoadingComponent } from '../../components/LoadingComponent';
+import { NotFoundData } from '../../components/NotFoundData';
+import '../../styles/product.scss';
+import React from 'react';
+import { ContactForm } from '../../components/ContactForm';
+import { AlertWrapper } from '../../components/AlertWrapper';
+import { Calculator } from '../../components/Calculator';
 
 export const ProductDetailsPage = () => {
-  const [isOpen, setOpen] = React.useState(false)
-  const { id } = useParams()
-  const { loading, products, error } = useProducts()
+  const [isOpen, setOpen] = React.useState(false);
+  const { id } = useParams();
+  const { loading, products, error } = useProducts();
   const product =
     !loading &&
     !error &&
     products &&
-    products.find((item) => item.id === parseInt(id, 10))
-  const [radio, setRadio] = React.useState(0)
-  const [status, setStatus] = React.useState({ ok: false, error: undefined })
+    products.find((item) => item.id === parseInt(id, 10));
+  const [radio, setRadio] = React.useState(0);
+  const [status, setStatus] = React.useState({ ok: false, error: undefined });
   React.useEffect(() => {
     if (status.ok || status.error) {
-      setOpen(true)
+      setOpen(true);
     }
-  }, [status])
+  }, [status]);
   return (
     <Container className="product-wrapper">
       {!loading && product && (
@@ -54,52 +43,9 @@ export const ProductDetailsPage = () => {
               className="d-flex align-items-center justify-content-center form-wrapper"
             >
               <div className="d-flex flex-column w-100">
-                {/* Калькулятор */}
-                <div>
-                  <span>Калькулятор вартості товару</span>
-
-                  <div class="input-group mb-2">
-                    <span class="input-group-text">Кількість</span>
-                    <input type="number" class="form-control" placeholder="0" />
-                    <span class="input-group-text">шт.</span>
-                  </div>
-
-                  <div class="input-group mb-2">
-                    <span class="input-group-text">Матеріал</span>
-                    <select
-                      class="form-select form-select-sm"
-                      aria-label=".form-select-sm example"
-                    >
-                      <option selected>оберіть матеріал...</option>
-                      <option value="1">Сосна 15000грн</option>
-                      <option value="2">Вільха 15000грн</option>
-                      <option value="3">Ясен 18000грн</option>
-                      <option value="3">Дуб 22000грн</option>
-                    </select>
-                  </div>
-
-                  <div class="input-group mb-3">
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="button"
-                      id="button-addon1"
-                    >
-                      Розрахувати вартість
-                    </button>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="0 грн"
-                    />
-                  </div>
-                </div>
-                {/* Калькулятор */}
-
                 <ul className="w-100 p-0">
                   {product.types &&
                     product.types.map((item, key) => {
-                      console.log("item", item)
-                      console.log("key", key)
                       return (
                         <li
                           key={key}
@@ -108,7 +54,7 @@ export const ProductDetailsPage = () => {
                         >
                           <div className="w-50 text-capitalize">
                             <input
-                              id={"radio_" + item}
+                              id={'radio_' + item}
                               checked={radio === key}
                               name="radio"
                               type="radio"
@@ -118,16 +64,16 @@ export const ProductDetailsPage = () => {
                             <span>{item.name}</span>
                           </div>
                           <div className="w-50 text-end">
-                            {item.price + " " + item.currency}
+                            {item.price + ' ' + item.currency}
                           </div>
                         </li>
-                      )
+                      );
                     })}
                 </ul>
                 <ContactForm
                   setStatus={setStatus}
                   product_id={id}
-                  product={product.name + " " + product.types[radio].name}
+                  product={product.name + ' ' + product.types[radio].name}
                 />
                 {isOpen ? (
                   <AlertWrapper
@@ -138,6 +84,9 @@ export const ProductDetailsPage = () => {
                 ) : (
                   <div />
                 )}
+
+                {/* Калькулятор */}
+                <Calculator product={product} />
               </div>
             </Col>
           </Row>
@@ -146,5 +95,5 @@ export const ProductDetailsPage = () => {
       {loading && <LoadingComponent />}
       {!loading && !product && <NotFoundData />}
     </Container>
-  )
-}
+  );
+};

@@ -1,0 +1,49 @@
+.calculator-wrapper {
+  margin-top: 50px;
+}
+
+.calculator-wrapper input,
+.calculator-wrapper span,
+.calculator-wrapper select,
+.calculator-wrapper option,
+.calculator-wrapper optgroup {
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 368px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 238px) {
+    font-size: 13px;
+  }
+}
+
+.calculator-wrapper span {
+  background-color: #d3d2d0;
+}
+
+.calculator-wrapper select,
+.calculator-wrapper input {
+  background-color: #e3e1da;
+  cursor: pointer;
+}
+
+.calculator-wrapper input:hover {
+  background-color: #e3e1da;
+}
+
+.calculator-header {
+  margin-bottom: 0;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-total-sum {
+  border-right: 3px solid white;
+}
