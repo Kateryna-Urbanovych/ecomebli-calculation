@@ -1,5 +1,6 @@
 .calculator-wrapper {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .calculator-wrapper input,
@@ -32,7 +33,8 @@
   cursor: pointer;
 }
 
-.calculator-wrapper input:hover {
+.calculator-wrapper input:hover,
+.calculator-wrapper input:focus {
   background-color: #e3e1da;
 }
 

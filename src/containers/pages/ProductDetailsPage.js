@@ -70,6 +70,8 @@ export const ProductDetailsPage = () => {
                       );
                     })}
                 </ul>
+                {/* Калькулятор */}
+                <Calculator product={product} />
                 <ContactForm
                   setStatus={setStatus}
                   product_id={id}
@@ -84,9 +86,6 @@ export const ProductDetailsPage = () => {
                 ) : (
                   <div />
                 )}
-
-                {/* Калькулятор */}
-                <Calculator product={product} />
               </div>
             </Col>
           </Row>

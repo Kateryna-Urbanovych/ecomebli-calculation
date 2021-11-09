@@ -60,7 +60,9 @@ export const Calculator = ({ product }) => {
                 return setMaterial(event.target.value);
               }}
             >
-              <option selected>оберіть матеріал...</option>
+              <option selected value="0">
+                оберіть матеріал...
+              </option>
               <option value="15000">сосна 15000грн</option>
               <option value="15000">вільха 15000грн</option>
               <option value="18000">ясен 18000грн</option>
@@ -76,7 +78,9 @@ export const Calculator = ({ product }) => {
                 return setMaterial(event.target.value);
               }}
             >
-              <option selected>оберіть матеріал...</option>
+              <option selected value="0">
+                оберіть матеріал...
+              </option>
               <optgroup label="обшивка каркасу">
                 <option value="10850">сосна 10850грн</option>
                 <option value="10850">вільха 10850грн</option>
@@ -99,14 +103,16 @@ export const Calculator = ({ product }) => {
                   return setMaterial(event.target.value);
                 }}
               >
-                <option selected>оберіть матеріал...</option>
+                <option selected value="0">
+                  оберіть матеріал...
+                </option>
                 <optgroup label="корпус з дсп, фасад з дерева">
                   <option value="12000">вільха 12000грн</option>
                   <option value="15000">ясен 15000грн</option>
                   <option value="18000">дуб 18000грн</option>
                 </optgroup>
-                <optgroup label="з масива дерева">
-                  <option value="22000">дерево? 22000грн</option>
+                <optgroup label="з массива дерева">
+                  <option value="22000">дерево 22000грн</option>
                 </optgroup>
               </select>
 
@@ -128,7 +134,7 @@ export const Calculator = ({ product }) => {
 
         <InputGroup>
           <InputGroupText className="input-total-sum">
-            Загальна вартість
+            Загальна вартість:
           </InputGroupText>
           <InputGroupText className="form-control">{`${handleCalculateTotalSum()}грн`}</InputGroupText>
         </InputGroup>
